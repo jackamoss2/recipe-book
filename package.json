@@ -1,24 +1,28 @@
 {
-  "name": "postgres-test",
+  "name": "recipe-book",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "compile": "npx tsc -b",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jackamoss2/node-postgres-test.git"
+    "url": "git+https://github.com/jackamoss2/recipe-book.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jackamoss2/node-postgres-test/issues"
+    "url": "https://github.com/jackamoss2/recipe-book/issues"
   },
-  "homepage": "https://github.com/jackamoss2/node-postgres-test#readme",
+  "homepage": "https://github.com/jackamoss2/recipe-book#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "pg": "^8.10.0"
+    "pg": "^8.10.0",
+    "typescript": "^5.0.4"
   }
 }
