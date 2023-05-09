@@ -21,7 +21,6 @@
   "homepage": "https://github.com/jackamoss2/recipe-book#readme",
   "devDependencies": {
     "nodemon": "^2.0.20",
-    "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
   },
   "dependencies": {

@@ -2,7 +2,6 @@ import * as express from "express";
 import * as cors from "cors";
 import bodyParser from "body-parser";
 
-
 const app = express();
 const port = 8080;
 
