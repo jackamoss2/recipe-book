@@ -1,6 +1,9 @@
-import * as express from "express";
-import * as cors from "cors";
+import express from "express";
+import cors from "cors";
 import bodyParser from "body-parser";
+
+import queries from "./queries.js";
+// const queries = require('./queries')
 
 const app = express();
 const port = 8080;
@@ -20,11 +23,11 @@ app.get('/', (request, response) => {
 app.get('/test', (request, response) => {
     response.status(200).json('ok');
 });
-// app.get('/users', db.getUsers);
-// app.get('/users/:id', db.getUserById);
-// app.post('/users', db.createUser);
-// app.put('/users/:id', db.updateUser);
-// app.delete('/users/:id', db.deleteUser);
+app.get('/users', queries.getUsers);
+app.get('/users/:id', queries.getUserById);
+app.post('/users', queries.createUser);
+app.put('/users/:id', queries.updateUser);
+app.delete('/users/:id', queries.deleteUser);
 
 app.listen(port, () => {
     console.log(`App running on port ${port}.`)

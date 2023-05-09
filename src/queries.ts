@@ -1,8 +1,18 @@
-import Pool from "pg";
+import pg from "pg";
+import * as dotenv from "dotenv";
+dotenv.config();
+
+const { Pool } = pg;
 const pool = new Pool({
+    // host:`127.0.0.1`,
+    // user:`server`,
+    // password:`biggly`,
+    // database:`recipe`,
+    // port:`5432`
     host: process.env.PSQL_HOST,
     user: process.env.PSQL_USER,
     password: process.env.PSQL_PASSWORD,
+    database: process.env.PSQL_DB,
     port: process.env.PSQL_PORT
 });
 
@@ -71,10 +81,12 @@ const deleteUser = (request, response) => {
 
 
 
-module.exports = {
+const queries = {
     getUsers,
     getUserById,
     createUser,
     updateUser,
     deleteUser,
 };
+
+export default queries;
